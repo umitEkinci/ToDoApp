@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="601.0" prefWidth="907.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ListController">
+   <children>
+      <VBox alignment="CENTER" layoutX="-3.0" layoutY="75.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <AnchorPane prefHeight="526.0" prefWidth="287.0">
+               <children>
+                  <TextField fx:id="taskFieldList" layoutX="10.0" layoutY="52.0" prefHeight="25.0" prefWidth="259.0" promptText="Add a new task in here..." />
+                  <Label layoutX="11.0" layoutY="35.0" text="Task:" />
+                  <Label layoutX="10.0" layoutY="106.0" text="Description:" />
+                  <TextField fx:id="descriptionFieldList" layoutX="10.0" layoutY="123.0" prefHeight="25.0" prefWidth="259.0" promptText="Add a description for your task..." />
+                  <Button fx:id="saveTaskButtonList" layoutX="10.0" layoutY="178.0" mnemonicParsing="false" onAction="#addTask" prefHeight="25.0" prefWidth="259.0" style="-fx-background-color: #000000;" text="Save Task" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="timerLabel" layoutX="11.0" layoutY="249.0" prefHeight="51.0" prefWidth="63.0" text="25:00">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="startButton" layoutX="93.0" layoutY="262.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Start" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="pauseButton" layoutX="162.0" layoutY="262.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Pause" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="stopButton" layoutX="234.0" layoutY="262.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Stop" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="11.0" layoutY="241.0" text="Pomodoro" />
+                  <Label fx:id="shortBreakTimerLabel" layoutX="12.0" layoutY="322.0" prefHeight="51.0" prefWidth="63.0" text="05:00">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="11.0" layoutY="314.0" text="Short Break" />
+                  <Button fx:id="shortBreakStartButton" layoutX="93.0" layoutY="335.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Start" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="shortBreakPauseButton" layoutX="162.0" layoutY="335.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Pause" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="shortBreakStopButton" layoutX="235.0" layoutY="335.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Stop" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Label fx:id="longBreakTimerLabel" layoutX="12.0" layoutY="394.0" prefHeight="51.0" prefWidth="63.0" text="15:00">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="13.0" layoutY="386.0" text="Long Break" />
+                  <Button fx:id="longBreakStartButton" layoutX="93.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Start" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="longBreakPauseButton" layoutX="162.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Pause" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="longBreakStopButton" layoutX="235.0" layoutY="407.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Stop" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="pomodoroIcon" fitHeight="60.0" fitWidth="49.0" layoutX="17.0" layoutY="459.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../assets/tomato.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="pomodoroCount" layoutX="35.0" layoutY="484.0" prefHeight="25.0" prefWidth="18.0" text="0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="resetCounterButton" layoutX="107.0" layoutY="471.0" mnemonicParsing="false" style="-fx-background-color: #000000;" text="Reset Pomodoro Counter" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="306.0" layoutY="75.0" prefHeight="526.0" prefWidth="614.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="290.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="75.0">
+         <children>
+            <ListView fx:id="taskList" editable="true" layoutX="4.0" layoutY="10.0" prefHeight="506.0" prefWidth="605.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <effect>
+                  <Blend />
+               </effect>
+            </ListView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="75.0" prefWidth="900.0" style="-fx-background-color: #e57373;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label layoutX="14.0" layoutY="27.0" text="ToDo">
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="28.0" text="Plan your work...">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="689.0" layoutY="12.0" prefHeight="51.0" prefWidth="193.0" AnchorPane.rightAnchor="0.0">
+               <children>
+                  <Button fx:id="logoutButton" layoutX="53.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #000000;" text="Logout" textFill="#eeeeee">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="39.0" fitWidth="28.0" layoutX="54.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/864_ch_h(1).png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="286.0" layoutY="75.0" orientation="VERTICAL" prefHeight="525.0" prefWidth="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="286.0" AnchorPane.topAnchor="75.0" />
+   </children>
+</AnchorPane>

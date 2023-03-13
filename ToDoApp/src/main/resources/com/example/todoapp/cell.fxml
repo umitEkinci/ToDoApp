@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="rootAnchorPane" focusTraversable="true" prefHeight="90.0" prefWidth="580.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="iconImageView" fitHeight="59.0" fitWidth="63.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/todo-list-icon-26.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="taskLabel" layoutX="59.0" layoutY="10.0" prefHeight="17.0" prefWidth="393.0" style="-fx-text-fill: #000000;" text="Task" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="descriptionLabel" layoutX="59.0" layoutY="29.0" prefHeight="38.0" prefWidth="512.0" style="-fx-background-color: #e57373; -fx-text-fill: #000000;" text="Description" AnchorPane.leftAnchor="59.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="dateLabel" layoutX="435.0" layoutY="69.0" prefHeight="17.0" prefWidth="137.0" style="-fx-text-fill: #000000;" text="Date Created" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="statusLabel" layoutX="59.0" layoutY="67.0" style="-fx-text-fill: #000000;" text="ToDo" />
+      <AnchorPane layoutX="361.0" layoutY="2.0" prefHeight="29.0" prefWidth="209.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fx:id="deleteButton" fitHeight="24.0" fitWidth="22.0" layoutX="183.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/delete-button-pngrepo-com.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="doneButton" fitHeight="22.0" fitWidth="22.0" layoutX="155.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/done.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="inProgressButton" fitHeight="22.0" fitWidth="22.0" layoutX="124.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/inprogress.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="toDoStatusButton" fitHeight="22.0" fitWidth="22.0" layoutX="94.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../assets/pngfind.com-peyton-list-png-5020179.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
